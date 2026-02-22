@@ -29,15 +29,5 @@ async def latency_check(request: Request):
             "breaches": sum(1 for l in latencies if l > threshold_ms),
         }
     return JSONResponse(content=result)
-```
-4. Click **Commit changes**
 
----
 
-**Step 2: Create `requirements.txt`**
-1. Click **Add file → Create new file**
-2. Filename: `requirements.txt`
-3. Content:
-```
-fastapi
-mangum
